@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub README Wiki</title>
+    <link rel="stylesheet" href="viewer.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="viewer.html" aria-label="GitHub README Wiki home">
+          <span>ReadWiki</span>
+        </a>
+        <form class="repo-search" id="repoForm">
+          <input
+            id="repoInput"
+            name="repo"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="owner/repo or GitHub URL"
+          />
+          <button type="submit">Open</button>
+        </form>
+        <nav class="top-actions" aria-label="Document actions">
+          <a id="githubLink" class="text-link" target="_blank" rel="noreferrer">GitHub</a>
+          <a id="rawLink" class="text-link" target="_blank" rel="noreferrer">Raw</a>
+        </nav>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Repository">
+          <section class="repo-card">
+            <div class="repo-kicker">Repository</div>
+            <h1 id="repoName">GitHub README Wiki</h1>
+            <p id="repoDescription">Open a GitHub repository to render its README.</p>
+            <div class="repo-meta">
+              <span id="repoBranch">-</span>
+              <span id="repoStars">-</span>
+            </div>
+          </section>
+
+          <section class="nav-section">
+            <h2>Outline</h2>
+            <ol id="toc" class="toc"></ol>
+          </section>
+        </aside>
+
+        <main class="main">
+          <section id="emptyState" class="empty-state">
+            <h2>Which repo would you like to understand?</h2>
+            <form class="hero-search" id="heroForm">
+              <input
+                id="heroInput"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="https://github.com/owner/repo"
+              />
+              <button type="submit">Open</button>
+            </form>
+            <div class="example-list">
+              <button type="button" data-example="microsoft/vscode">microsoft / vscode</button>
+              <button type="button" data-example="facebook/react">facebook / react</button>
+              <button type="button" data-example="vercel/next.js">vercel / next.js</button>
+            </div>
+          </section>
+
+          <section id="loadingState" class="status-state" hidden>
+            <span class="spinner" aria-hidden="true"></span>
+            <span>Loading README</span>
+          </section>
+
+          <section id="errorState" class="status-state error" hidden>
+            <h2>Could not open this document</h2>
+            <p id="errorMessage"></p>
+          </section>
+
+          <article id="document" class="markdown-body" hidden></article>
+        </main>
+      </div>
+    </div>
+    <script src="viewer.js"></script>
+  </body>
+</html>

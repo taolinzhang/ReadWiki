@@ -1,0 +1,108 @@
+.ghrw-entry {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 8px 0;
+  font-family: Geist, "Geist Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ghrw-entry__button {
+  align-items: center;
+  background: #f2f1f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #333333;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 400;
+  gap: 6px;
+  line-height: 1;
+  padding: 8px 10px;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.ghrw-entry__button:hover {
+  background: #ecebea;
+  border-color: #d1d1d1;
+  color: #333333;
+  text-decoration: none;
+}
+
+.ghrw-entry__mark {
+  background: #333333;
+  border-radius: 999px;
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+}
+
+.ghrw-toolbar-item {
+  align-items: center;
+  display: flex;
+}
+
+.ghrw-icon-button {
+  align-items: center;
+  background: #f2f1f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #333333;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  width: 32px;
+}
+
+.ghrw-icon-button:hover {
+  background: #ecebea;
+  border-color: #d1d1d1;
+  color: #333333;
+  text-decoration: none;
+}
+
+.ghrw-icon-button--toolbar {
+  margin-right: 8px;
+}
+
+.ghrw-icon-button--floating {
+  bottom: 24px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  height: 42px;
+  position: fixed;
+  right: 24px;
+  width: 42px;
+  z-index: 2147483647;
+}
+
+.ghrw-icon-button--floating:hover {
+  transform: translateY(-1px);
+}
+
+.ghrw-icon__glyph {
+  display: grid;
+  gap: 3px;
+  width: 15px;
+}
+
+.ghrw-icon__glyph span {
+  background: currentColor;
+  border-radius: 999px;
+  display: block;
+  height: 2px;
+}
+
+.ghrw-icon__glyph span:nth-child(1) {
+  width: 15px;
+}
+
+.ghrw-icon__glyph span:nth-child(2) {
+  width: 11px;
+}
+
+.ghrw-icon__glyph span:nth-child(3) {
+  width: 14px;
+}
